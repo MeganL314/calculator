@@ -1,44 +1,69 @@
 .display_container {
     display: flex;
     justify-content: center;
+    width: 600px;
 }
 
 
 #display {
-    width: 500px;
-    height: 55px;
+    width: 384px;
+    height: 60px;
     border: 3px solid black;
+    margin: 8px;
 }
 
 .operator_num_container{
     display: flex;
     justify-content: center;
-    width: 500px;
+    width: 600px;
 }
 
-.number_buttons {
+.numbers_container {
     display: flex;
-    width: 450px;
-    height: 390px;
+   /* width: 450px;
+    height: 390px; */
     justify-content: center;
-    border: 1px solid black;
     flex-direction: column;
 }
 
-.numer_row_one.number_row_two.number_row_three{
-     display: flex;
+.number_row_one, 
+.number_row_two,
+.number_row_three {     
+    display: flex;
+    justify-content: center;
+    /*width: 500px;*/
+    /*height: 10px;*/
 }
 
 
 .number {
     border: 1px solid black;
-    width: 50px;
-    height: 30px;
+    width: 102px;
+    height: 102px;
+    margin: 3px;
 }
 
-#zero {
+.zero_container{
+    display: flex;
+    width: 600px;
+    justify-content: center;
+}
+
+#zero, #clear {
     border: 1px solid black;
-    width: 300px;
-    height: 130px;
+    width: 189px;
+    height: 60px;
+    margin: 3px;
 }
 
+
+.math_operators {
+    display: flex;
+    flex-direction: column;
+}
+
+#add, #subtract, #multiply, #divide, #equals {
+    width: 60px;
+    height: 58.8px;
+    margin: 3px;
+}
