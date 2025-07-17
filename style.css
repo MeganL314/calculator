@@ -1,0 +1,44 @@
+.display_container {
+    display: flex;
+    justify-content: center;
+}
+
+
+#display {
+    width: 500px;
+    height: 55px;
+    border: 3px solid black;
+}
+
+.operator_num_container{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+}
+
+.number_buttons {
+    display: flex;
+    width: 450px;
+    height: 390px;
+    justify-content: center;
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+.numer_row_one.number_row_two.number_row_three{
+     display: flex;
+}
+
+
+.number {
+    border: 1px solid black;
+    width: 50px;
+    height: 30px;
+}
+
+#zero {
+    border: 1px solid black;
+    width: 300px;
+    height: 130px;
+}
+
