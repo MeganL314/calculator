@@ -2,20 +2,23 @@
     display: flex;
     justify-content: center;
     width: 600px;
+    background-color: #EFDADD;
 }
 
 
 #display {
     width: 384px;
     height: 60px;
-    border: 3px solid black;
+    border: 3px solid #5f494d;
     margin: 8px;
+    background-color: #e5ddde;
 }
 
 .operator_num_container{
     display: flex;
     justify-content: center;
     width: 600px;
+    background-color: #EFDADD;
 }
 
 .numbers_container {
@@ -37,23 +40,28 @@
 
 
 .number {
-    border: 1px solid black;
+    border: 2px solid #5f494d;
     width: 102px;
     height: 102px;
     margin: 3px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .zero_container{
     display: flex;
     width: 600px;
     justify-content: center;
+    background-color: #EFDADD;
 }
 
 #zero, #clear {
-    border: 1px solid black;
+    border: 2px solid #5f494d;
     width: 189px;
     height: 60px;
     margin: 3px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -64,6 +72,39 @@
 
 #add, #subtract, #multiply, #divide, #equals {
     width: 60px;
+    border: 2px solid #5f494d;
     height: 58.8px;
     margin: 3px;
+    font-size: 20px;
+    font-weight: bold;
 }
+
+button {
+    border-radius: 25px;
+}
+
+
+#one, #seven,
+#nine, #clear {
+    background-color: #BE394F;
+    color: white;
+}
+
+#eight, #six, #zero, #multiply {
+    background-color: #815568;
+    color: white;
+}
+
+#three, #five, #add, #divide {
+    background-color: #015871;
+    color: white;
+}
+
+
+#four, #two, #subtract, #equals {
+    background-color: #ce7b5b;
+    color: white;
+}
+
+
+
