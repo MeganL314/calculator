@@ -54,7 +54,23 @@ buttons.forEach((button) => {
             screen.textContent = screen_text;
         }
         // save the equation but clear the screen if +-/x is hit
-
+        else if(button.textContent == '+' || button.textContent == '-' || button.textContent == 'x' ||
+            button.textContent == '/'
+        ){
+            // when any of the equation operators are press, check if they're already there
+            if(['+','-','/','x'].some(val => equation.includes(val))){
+                operate(equation);
+                // screen_text should have the result of operate
+                screen_text = "";
+                screen.textContent = screen_text;
+                equation = [];
+            }
+            else{
+                equation.push(button.textContent);
+                screen_text = screen_text + button.textContent;
+                screen.textContent = screen_text;                
+            }
+        }
         // else just save the equation
         else{
             // build equation first
@@ -62,6 +78,7 @@ buttons.forEach((button) => {
             screen_text = screen_text + button.textContent;
             screen.textContent = screen_text;
         }
+    console.log(equation);
     });
     //
 });
