@@ -8,10 +8,14 @@
 
 #display {
     width: 384px;
-    height: 60px;
+    height: 40px;
     border: 3px solid #5f494d;
     margin: 8px;
     background-color: #e5ddde;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .operator_num_container{

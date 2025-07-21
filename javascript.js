@@ -34,3 +34,39 @@ const operate = function(operator, a, b){
     }
 }
 
+const screen = document.querySelector("#display");
+const buttons = document.querySelectorAll("button");
+
+let equation = [];
+let screen_text = "";
+
+// Fill in new
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        // run operate() if '=' sign is hit
+        if(button.textContent == '='){
+            operate(equation);
+        }
+        // clear the screen if clear is hit
+        else if(button.textContent == 'clear'){
+            equation = [];
+            screen_text = "";
+            screen.textContent = screen_text;
+        }
+        // save the equation but clear the screen if +-/x is hit
+
+        // else just save the equation
+        else{
+            // build equation first
+            equation.push(button.textContent);
+            screen_text = screen_text + button.textContent;
+            screen.textContent = screen_text;
+        }
+    });
+    //
+});
+
+
+
+
+
