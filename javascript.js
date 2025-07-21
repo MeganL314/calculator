@@ -20,16 +20,20 @@ let operation;
 
 
 const operate = function(operator, a, b){
-    if (operator == multiply){
+    console.log(operator);
+    console.log(a);
+    console.log(b);
+
+    if (operator == 'x'){
         return multiply(a,b)
     }
-    else if (operator == subtract){
+    else if (operator == '-'){
         return subtract(a,b)
     }
-    else if (operator == divide){
+    else if (operator == '/'){
         return divide(a,b)
     }
-    else if (operator == add){
+    else if (operator == '+'){
         return add(a,b)
     }
 }
@@ -45,7 +49,13 @@ buttons.forEach((button) => {
     button.addEventListener("click", () => {
         // run operate() if '=' sign is hit
         if(button.textContent == '='){
-            operate(equation);
+            let expression = buildExpression(equation);
+            console.log(expression);
+            let answer = operate(expression[1], expression[0], expression[2]);
+            console.log(answer);
+            screen_text = answer;
+            screen.textContent = screen_text;
+            equation = [answer];
         }
         // clear the screen if clear is hit
         else if(button.textContent == 'clear'){
@@ -78,12 +88,30 @@ buttons.forEach((button) => {
             screen_text = screen_text + button.textContent;
             screen.textContent = screen_text;
         }
-    console.log(equation);
+    //console.log(equation);
     });
     //
 });
 
 
+function buildExpression(array) {
+    let output = [];
+    const operators = ['+', '-', '/', 'x'];
 
+    let current = ''
+    for(let item of array){
+        // console.log(item);
+        if(!operators.includes(item)){
+            current = current + item;
+        }
+        else{
+            output.push(Number(current));
+            current= '';
+            output.push(item);
+        }
+    }
+    output.push(Number(current));
+    return output;
+}
 
 
