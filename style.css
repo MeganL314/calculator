@@ -1,7 +1,7 @@
 .display_container {
     display: flex;
     justify-content: center;
-    width: 600px;
+    width: 480px;
     background-color: #EFDADD;
 }
 
@@ -21,7 +21,7 @@
 .operator_num_container{
     display: flex;
     justify-content: center;
-    width: 600px;
+    width: 480px;
     background-color: #EFDADD;
 }
 
@@ -54,7 +54,7 @@
 
 .zero_container{
     display: flex;
-    width: 600px;
+    width: 480px;
     justify-content: center;
     background-color: #EFDADD;
 }
